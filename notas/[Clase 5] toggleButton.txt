@@ -1,0 +1,31 @@
+La sintaxis de React es muy similiar a Angular, pero con una
+mayor facilidad en sus componentes y una mayor libertad de estos.
+
+En la clase 5 nos enseñaron a cambiar de estados booleanos 
+y renderizar su estado activo e inactivo.
+
+Utilizamos un const ToggleButton(),
+dentro de este, definimos dos datos. 
+
+"isActive" el booleano que va a cambiar.
+"setIsActive" este será el encargado de cambiar el estado de "isActive"
+
+Renderizamos con un 
+
+Return (
+    donde colocamos un div principal (contenedor)
+    <div>
+    Y dentro de este div le colocamos el boton que mostraria el estado y realizaria el cambio.
+
+    <button onClick={() => setIsActive(!isActive)}>
+    Le asignamos el evento "onClick" al boton, que realiza la funcion de cambiar el valor de la variable "isActive" con !isActive (esto cambia el estado booleano actual al otro estado)
+
+    {isActive? "Alerta 🦊❗": "Inactivo... 🦊💤"}
+    Aca renderizamos dentro del boton el estado que este el "isActive",
+    Si es true, mostrara "Alerta", si es false, mostrara "Inactivo..."
+
+    </button>
+    <div/>
+)
+
+Una practica muy parecida al ngOnClick de Angular, mas sencilla de utilizar.
