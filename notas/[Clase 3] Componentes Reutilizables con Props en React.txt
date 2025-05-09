@@ -1,0 +1,21 @@
+Los "Props" son las propiedades de los componentes.
+
+Para crear componentes reutilizables podemos crear una carpeta donde guardar esos componentes. Por ejemplo:
+components
+
+En esta carpeta creamos un archivo JavaScript o TypeScript con una X al final de este. (En mi caso, elegi TypeScript)
+El componente sera una "card" asi que agregamos un archivo llamado card.tsx
+
+En el componente principal (Llamado App.tsx)
+Importamos el componente card, con la siguiente linea:
+
+import Card from './components/card';
+
+Despues, la llamamos con: 
+<Card title="Aqui va la propiedad title" description="Aqui va la propiedad description"/>
+
+Dentro del return.
+
+Wiki de midudev:
+
+https://www.reactjs.wiki/
