@@ -1,6 +1,7 @@
 import './App.css'
 import Card from './components/card';
 import Counter from './components/counter'
+import ToggleButton from './components/toggleButton';
 
 function App() {
   const items = ['React', 'TypeScript', 'Vite']
@@ -12,6 +13,7 @@ function App() {
     <Card title="Card 2" description="Esta es una segunda card"/>
     <Card title="Card 3" description="Esta es una tercera card"/>
     <Counter/>
+    <ToggleButton/>
     <ul>
       {
       items.map((item, index) => (
