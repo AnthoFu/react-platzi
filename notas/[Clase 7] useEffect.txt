@@ -1,0 +1,15 @@
+La Analogía de la casa (React como una casa inteligente)
+
+useState es como los interruptores de luz, termostatos, y controles que cambian directamente cosas dentro de la casa.
+
+Enciendes la luz (se ve!)
+Cambias la temperatura del aire acondicionado (lo sientes!)
+Abres una puerta (lo ves!)
+Cambia el estado interno de la casa. Es inmediato y visible.
+
+useEffect es como el sistema automático de la casa que reacciona cuando haces algo:
+
+Si abres una ventana, se apaga el aire (acción secundaria)
+Si no hay movimiento por 30 minutos, apaga las luces (efecto por cambio)
+Si el detector de humo suena, llama a emergencias (reacción externa)
+No cambia nada visual directamente, pero actúa cuando algo pasa.
