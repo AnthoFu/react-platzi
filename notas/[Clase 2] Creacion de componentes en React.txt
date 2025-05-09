@@ -1,0 +1,25 @@
+Para crear el proyecto desde cero:
+
+Abrir Terminal o PowerShell
+
+>npm create vite@latest
+
+Colocar nombre al proyecto. (le puse ejercicio-1)
+
+Elegir React.
+
+Elegir Javascript + SWC (o Typescript + SWC)
+
+En ese punto se crea el proyecto ejercicio-1. Una vez se cree el proyecto, hay que ingresar a la carpeta del proyecto desde la terminal o PowerShell.
+
+Este es el comando.
+
+cd ejercicio-1
+
+Luego, debemos instalar el paquete de node a nuestro proyecto. El comando es el siguiente:
+
+npm install
+
+Una vez instalado, ya podemos ejecutar el proyecto con el siguiente comando.
+
+npm run dev.
