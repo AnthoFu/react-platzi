@@ -1,10 +1,11 @@
 import './App.css'
-import Card from './components/card';
+import Card from './components/card/card';
 import Counter from './components/counter'
 import ToggleButton from './components/toggleButton';
 import AnthoFu from './assets/AnthoFu.png'
 import NameForm from './components/nameForm';
 import CounterWithEffect from './components/counterWithEffect';
+import Img from './assets/AnthoFu - Logo.jpg'
 
 function App() {
   const items = ['React', 'TypeScript', 'Vite']
@@ -23,7 +24,7 @@ function App() {
         }
       </ul>
       <hr />
-      <Card title="Card 1" description="Esta es una descripcion, una 'Prop'" />
+      <Card title="AnthoFu" tag="Etiqueta" img={Img} description="Esta es una descripcion, una 'Prop' o una propiedad por asi decirlo." />
       <hr />
       <Counter />
       <hr />
