@@ -6,6 +6,7 @@ import AnthoFu from './assets/AnthoFu.png'
 import NameForm from './components/nameForm';
 import CounterWithEffect from './components/counterWithEffect';
 import Img from './assets/AnthoFu - Logo.jpg'
+import Button from './components/card/button';
 
 function App() {
   const items = ['React', 'TypeScript', 'Vite']
@@ -35,6 +36,9 @@ function App() {
       <NameForm />
       <hr />
       <CounterWithEffect/>
+      <hr />
+      <Button> Gris </Button>
+      <Button blue>Azul</Button>
     </section>
   );
 }
