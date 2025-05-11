@@ -1,0 +1,10 @@
+En la clase 12 creamos un componente estatico.
+
+¿Estatico? ¿Que quiero decir con eso?
+
+Es decir, un componente que sus datos no van a cambiar.
+
+¿Entonces cuales son los componentes dinamicos?
+
+Son aquellos que obtienen datos, y mediante esos datos se cambia el 
+renderizado de la pagina, estos datos podria ser obtenidos mediante una API.
