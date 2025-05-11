@@ -25,12 +25,25 @@ const Card: React.FC<CardProps> = ({ title, description, tag, img }) => {
                         </span>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
     )
 }
+
+// Se pueden utilizar estilos en linea, como en el propio HTML de esta forma:
+// <div style={{color:"blue", fontSize:"2rem", textAlign:"center"}}><div/>
+// Pero no es recomendado por visibilidad y comprension del codigo.
+
+//Tambien se puede hacer una variable para que sea el style con los estilos. Ejemplo:
+// const Card = () => {
+//const textStyles = {
+//  color="blue",
+//  fontSize="2rem",
+//  textAlign="center"
+//  }
+//}
+
+//E importarlos en donde se vaya a utilizar. ejemplo: <div style={textStyles}><div/>
+
 
 export default Card;
