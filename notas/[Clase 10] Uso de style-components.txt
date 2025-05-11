@@ -1,0 +1,11 @@
+En la clase 10 la profesora recomendo utilizar Style Components (una libreria de CSS)
+para modificar los estilos en linea al estilo del framework de CSS Tailwind.
+
+Pero actualmente no es ideal idea usar Styled Components porque recientemente en 2025 anunciaron
+que pondrán el proyecto en "modo mantenimiento" por diversos motivos como la caída de uso de la librería,
+alternativas en tendencia como Tailwind y por funciones importantes dadas por deprecadas en React que
+resultaban importantes para la librería.
+
+Anuncio: https://opencollective.com/styled-components/updates/thank-you
+
+Intente importar Tailwind, pero no lo logre, asi que decidi continuar utilizando style components por el momento.
