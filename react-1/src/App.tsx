@@ -6,7 +6,8 @@ import AnthoFu from './assets/AnthoFu.png'
 import NameForm from './components/nameForm';
 import CounterWithEffect from './components/counterWithEffect';
 import Img from './assets/AnthoFu - Logo.jpg'
-import Button from './components/card/button';
+import Button from './components/button';
+import TailwindText from './components/text';
 
 function App() {
   const items = ['React', 'TypeScript', 'Vite']
@@ -39,6 +40,8 @@ function App() {
       <hr />
       <Button> Gris </Button>
       <Button blue>Azul</Button>
+      <hr />
+      <TailwindText></TailwindText>
     </section>
   );
 }

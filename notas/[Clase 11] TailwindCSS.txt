@@ -1,0 +1,33 @@
+En la clase 11 nos enseñaron a instalar tailwindcss como framework para CSS.
+
+Para instalarlo seguí los siguientes pasos:
+
+1. Instalamos las dependencias
+
+npm install tailwindcss @tailwindcss/vite
+
+2. Configuramos el archvio vite.config.ts añadiendo el plugin "tailwindcss"
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+3. Importamos el tailwindcss en el index.CSS
+
+@import "tailwindcss";
+
+4. Listo, ya tendriamos tailwindcss instalado.
+
+Si llega a aparecer el siguiente error:
+
+error when starting dev server:
+Error: EPERM: operation not permitted, rmdir
+
+La solución que utilice fue borrar la carpeta de node_modules, la carpeta de package-lock.json y volver a instalar las dependencias.
+
+Documentación oficial de tailwindcss en el entorno de react con vite:
+
+https://tailwindcss.com/docs/installation/using-vite
