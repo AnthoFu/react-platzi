@@ -1,0 +1,16 @@
+En la clase 13 nos enseñaron a utilizar la herramienta de FETCH, la API nativa de JavaScript.
+Nos ayuda a realizar solicitudes HTTPS a APIs y nos permite cargar los datos.
+
+Para utilizarla hay que seguir el siguiente formato:
+
+const UserList = () => {
+    const [users, setUsers] = useState<User[]>([]);
+    useEffect(()=>{
+        fetch("//URL//")
+            .then((Response) => Response.json()) // Aqui se guarda la respuesta
+            .then((data) => setUsers(data)) // Aqui se asigna la respuesta al setUsers 
+            .catch ((error) => console.log("Error en el fetch de UserList:", error)) //Aqui atrapa el error y hace un console log
+    }, [])
+
+    Fetch es una herramienta esencial para interactuar con APIs en React 
+    y su integración con hooks como useEffect permite manejar datos externos de manera eficiente.
