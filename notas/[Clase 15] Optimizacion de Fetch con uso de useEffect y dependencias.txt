@@ -1,0 +1,49 @@
+En esta clase se creó un buscador con dos hooks de react:
+
+1.useEffect y useState.
+
+useEffect para utilizar un efecto secundario. (La peticion HTTP de la API)
+
+useState para modificar las variables asignadas, por ejemplo query y posts.
+
+En esta clase utilizamos una API de posts que se le puede hacer una consulta en la URL.
+
+https://jsonplaceholder.typicode.com/posts?tittle_like=${query}
+
+Como esta API esta teniendo errores al momento de colocarle un Query, decidi utilizar la API de Fake Platzi Store.
+
+https://api.escuelajs.co/api/v1/products/?title=${query}
+
+Este fue el codigo utilizado para poder hacer el fetch.
+
+    useEffect(()=> {
+        fetch(`https://api.escuelajs.co/api/v1/products/?title=${query}`)
+            .then((response)=> response.json())
+            .then((data) => setProducts(data))
+            .catch((error)=> console.error ('[Error] Busqueda de post:', error))
+    }, [query]) // Esta es la dependencia para que funcione el useEffect
+
+En la parte donde dice "{query}" se modificara con un input que se cambiara automaticamente al evento "OnChange"
+
+            <input type="text"
+            placeholder="Buscar por titulo"
+            value={query}
+            onChange={(event)=> setQuery(event.target.value)}/>
+            <ul>
+
+
+Por ultimo, renderizamos la lista de los productos
+
+<ul>
+                {
+                    products.map((product) =>(
+                        <li key='product.id'>
+                        <h3>{product.title}</h3>
+                        <p>{product.description}</p>
+                        <span>{product.price}</span>
+                        </li>
+                    ))
+                }
+            </ul>
+
+Se muestra el titulo, la descripcion del producto y por ultimo el precio.
