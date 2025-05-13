@@ -1,0 +1,42 @@
+En esta clase utilizamos lo que son los "switch-case", para manejo de estados mas complejos.
+
+Utilizamos un reducer con switch-case para manejar dos acciones:
+
+type Action = { type: 'increment' | 'decrement' };
+type State = { count: number };
+
+const reducer = (estado: State, accion: Action) => {
+    switch (accion.type) {
+        case "increment":
+            return { count: estado.count + 1 };
+        case "decrement":
+            return { count: estado.count - 1 };
+        default:
+            return estado;
+    }
+}
+
+increment: Aumenta el valor count en 1
+
+decrement: Disminuye count en 1
+
+const Counter = () => {
+    const [estado, dispatch] = useReducer(reducer, { count: 0 });
+
+El estado inicial es {count: 0}. 
+
+    return (
+        <div>
+            <p>Contador: {estado.count}</p>
+            <button onClick={() => dispatch({ type: "increment" })}>
+                ¡Incrementar!
+            </button>
+            <button onClick={() => dispatch({ type: "decrement" })}>
+                ¡Decrementar!
+            </button>
+        </div>
+    )
+}
+
+Al hacer clic en los botones se despachan las acciones, modificando el estado de forma predecible.
+Y muestra el valor actual en pantalla.
