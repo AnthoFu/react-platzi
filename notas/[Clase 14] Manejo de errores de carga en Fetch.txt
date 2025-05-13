@@ -1,0 +1,17 @@
+En esta clase copiamos y modificamos el userList y creamos un userListWithLoading.
+
+El useEffect se ejecuta una vez al iniciar el componente, utilizamos una funcion asincrona para obtener los datos de la API.
+
+Se utilizo un try{}
+catch{}
+y finally{}
+Para este caso.
+
+Tambien agregamos un renderizado condicional.
+if (isLoading) return <p>Cargando lista de usuarios...</p>
+
+Este aparece cuando todavia esta cargando los datos de la API.
+
+if (error) return <p>¡Error! Contacta con Antho para arreglarlo: {error}</p>;
+
+Este aparece cuando hay algun tipo de error al consultar los datos de la API.

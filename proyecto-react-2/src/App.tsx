@@ -1,12 +1,12 @@
 import './App.css'
 import RenderProductos from './components/staticComponent/staticComponent'
-import UserList from './components/userList/userList'
+import UserListWithLoading from './components/userListWithLoading/userListWithLoading'
 
 function App() {
   return (
   <div>
     <RenderProductos/>
-    <UserList/>
+    <UserListWithLoading/>
   </div>
   )
   
