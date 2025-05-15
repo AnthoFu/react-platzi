@@ -1,0 +1,37 @@
+A) React.memo:
+
+1.Definición: Función de orden superior que previene re-renderizados innecesarios en componentes funcionales.
+
+2.Caso de uso: Optimizar componentes que reciben props y no necesitan actualizarse si estas no cambian.
+
+3.Ejemplo:
+
+const Child = React.memo(({ counter }) => {
+  console.log('renderizando child');
+  return <p>Contador: {counter}</p>;
+});
+
+B) useCallback:
+
+1.Definición: Hook que devuelve una versión memorizada de la función que solo cambia si alguna de las dependencias ha cambiado.
+
+2.Caso de uso: Pasar funciones a componentes hijos sin causar re-renderizados innecesarios.
+
+3.Ejemplo:
+
+const increment = useCallback(() => {
+  setCounter(prev => prev + 1);
+}, []);
+
+
+C) useMemo:
+
+1.Definición: Hook que memoriza un valor calculado.
+
+2.Caso de uso: Evitar cálculos costosos en cada renderizado.
+
+3.Ejemplo:
+
+const result = useMemo(() => expensiveCalculation(counter), [counter]);
+
+Estos conceptos son fundamentales para optimizar aplicaciones React y mejorar su rendimiento.
