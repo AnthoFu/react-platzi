@@ -1,0 +1,23 @@
+Lenguaje tipado: Es necesario declarar el tipo de variable que vamos a recibir o usar. Ejemplo: Typescript
+
+Lenguaje no tipado: El mismo lenguaje deduce el tipo de dato a recibir según sus caracteristicas. Ejemplo: Javascript
+
+Para tipar un estado podemos tiparlo directamente en la linea de codigo, ejemplo:
+
+const Counter = () => {
+    const [count, setCount] = useState <number> (0);
+}
+
+El tipado es el <number>, haciendo referencia que el '()' obligatoriamente debe ser un numero.
+
+Para tipar una funcion podemos tipar las propiedades internas de la siguiente forma:
+
+function saludo(name: string):string{
+  return `¡Hola, ${name}!`
+}
+
+Aca hacemos dos tipados.
+
+1. Tipando la dependencia que se espera 'name' en string.
+2. Tipando el resultado esperado (propiedad):string.
+
