@@ -1,0 +1,24 @@
+TypeScript es un superconjunto de JavaScript, caracteristicas:
+
+Tipado Estático: Permite declarar tipos de datos, lo que ayuda a evitar errores en tiempo de compilación.
+
+Clases Mejoradas: Soporte para clases, herencia y modificadores de acceso (public, private)
+Diferencias con JavaScript:
+
+Errores en Tiempo de Compilación: Captura errores antes de la ejecución, mientras que JavaScript puede tener errores que solo se ven en tiempo de ejecución.
+
+-> TypeScript es ideal para proyectos grandes donde la mantenibilidad y la calidad del código son cruciales.
+
+Como tipar?
+
+de la siguiente forma:
+
+se crea una variable, con al principio colocandole "type", se suele colocar el nombre del componente y al final "Props" para tipar las
+propiedades.
+
+type expresionProps {
+    propiedad 1: string | number 
+    propiedad 2: () =>
+        void (si no se espera que returne nada)
+}
+
