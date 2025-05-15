@@ -1,0 +1,9 @@
+La creación de custom hooks en React es una técnica poderosa que permite reutilizar
+lógica entre componentes, mejorando la organización del código y facilitando
+el mantenimiento de aplicaciones.
+
+En esta clase nos enseñaron a crearlos.
+
+Se recomienda realizar una carpeta llamada 'hooks' para guardar estos hooks.
+
+Se recomienda en los hooks al principio del nombre colocarle 'use', como 'useState', 'useEffect', ect.
