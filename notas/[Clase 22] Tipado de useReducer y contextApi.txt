@@ -1,0 +1,93 @@
+El tipado es algo complicado, pero es necesario si se piensa trabajar en equipo o para evitar problemas de errores de datos a futuro.
+
+Para tipar useReducer en React hicimos lo siguiente:
+
+type state = {
+    count: number
+}
+
+Tipamos el estado que 'count' sera un numero
+
+type action = {
+    type: "increment" | "decrement"
+}
+
+Tipamos el tipo de accion, que puede ser 'increment' o 'decrement'
+
+const reducer = (state:state, action:action) =>{
+    switch (action.type){
+        case 'increment':
+            return {count: state.count + 1};
+        case 'decrement':
+            return {count: state.count - 1};
+        default:
+            return state;
+    }
+}
+
+En el reducer, les agregamos el tipado a las dependencias 'state' le asignamos el tipado 'state' y a 'action' le asignamos el tipado 'action'
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+En el caso del contextApi fue algo confuso y un poco complicado.
+
+Empezamos creando el tipado de ThemeContext:
+
+type ThemeContextType = {
+    theme: string, // Theme puede ser tanto string como 'light' | 'dark' ya que son las dos propiedades que manejamos
+    toggleTheme: () => void; // Aqui asignamos que es una funcion que regresa vacio, no se espera que retorne nada.
+}
+
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+Esta línea crea un contexto de React llamado ThemeContext usando la función createContext. El tipo del contexto
+se define como ThemeContextType | undefined, lo que significa que el valor del contexto
+puede ser un objeto con la forma especificada por ThemeContextType o puede ser undefined.
+
+Inicializar el contexto con undefined es una práctica común cuando se quiere
+forzar a los componentes consumidores a estar dentro de un proveedor (Provider).
+Así, si un componente intenta usar el contexto fuera del proveedor,
+el valor será undefined y se puede lanzar un error personalizado,
+como se hace en el componente ThemeButton.
+
+Esto ayuda a prevenir errores difíciles de detectar y mejora la seguridad del
+código al trabajar con contextos en React y TypeScript.
+
+
+function ThemeProvider ( { children }: {children: React.ReactNode} ):ReactNode {
+    const [theme, setTheme] = useState <'dark' | 'light'> ("light");
+
+Esta porción de código define un componente funcional de React llamado ThemeProvider.
+El componente recibe una prop llamada children, que está tipada como React.ReactNode.
+Esto significa que ThemeProvider puede envolver cualquier contenido válido de React, como otros componentes,
+texto o elementos JSX.
+
+Dentro del componente, se utiliza el hook useState para crear una variable de estado
+llamada theme y su función actualizadora setTheme.
+El estado está restringido a dos valores posibles: 'dark' o 'light',
+gracias a la anotación de tipo <‘dark’ | ‘light’>. El valor inicial del tema es "light".
+Esto permite controlar y alternar el tema de la aplicación de forma segura y tipada, asegurando que solo se usen los valores permitidos.
+
+
+function ThemeButton () {
+    const context = useContext(ThemeContext);
+    if (!context) {
+        throw new Error("ThemeButton debe ser usado con ThemeProvider");
+    }
+    const { theme, toggleTheme } = context;
+
+
+Este fragmento define un componente funcional de React llamado ThemeButton.
+Dentro del componente, se utiliza el hook useContext para acceder al valor actual
+del contexto ThemeContext. El resultado se almacena en la variable context.
+
+A continuación, se verifica si context es undefined.
+Si es así, se lanza un error con el mensaje
+"ThemeButton debe ser usado con ThemeProvider".
+Esto garantiza que el componente solo se utilice dentro de un proveedor
+de contexto adecuado, evitando errores inesperados.
+
+Finalmente, si el contexto está disponible,
+se extraen las propiedades theme y toggleTheme del objeto de contexto.
+Estas propiedades permiten al botón conocer el tema actual y
+tener acceso a la función para alternar entre temas.
