@@ -1,0 +1,21 @@
+React 19 trae cambios importantes que mejoran el desarrollo y el rendimiento de las aplicaciones. Las novedades clave incluyen:
+
+Server Components
+Permiten renderizar componentes en el servidor, lo que mejora el SEO y la carga inicial de datos.
+
+Nuevas Directivas: use client y use server
+Permiten definir explícitamente si un componente se ejecuta en el cliente (use client) o en el servidor (use server), ofreciendo un control más preciso.
+
+Actions y Server Actions
+Reemplazan los eventos tradicionales de formularios y permiten realizar peticiones asíncronas desde el cliente a funciones del servidor, simplificando la comunicación.
+
+Nuevos y Mejores Hooks
+Hooks para formularios: useActionState (manejo de estado), useFormStatus (estado de envío) y useOptimistic (operaciones optimistas) simplifican la creación de formularios interactivos.
+API use: Facilita el manejo de promesas en el renderizado y es compatible con Suspense, mejorando la experiencia de carga.
+Otras Mejoras
+Carga de recursos optimizada: Nuevas APIs como preconnect y preload optimizan la carga de scripts y estilos.
+Cambios en la API de React: Ahora se puede usar ref como prop sin forwardRef, context sin provider, y hay soporte para metadatos y custom elements.
+Actualización
+Actualizar a React 19 es sencillo usando npm install react@latest react-dom@latest y npm install vite@latest.
+
+En resumen, React 19 busca hacer las aplicaciones más rápidas, eficientes y fáciles de mantener, ofreciendo herramientas potentes para los desarrolladores.
