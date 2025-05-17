@@ -1,5 +1,8 @@
 # Notas y Proyectos del Curso de React.js de Platzi
 
+![Diploma-De-React-Anthofu](https://github.com/user-attachments/assets/fd018c5a-7d52-4415-a911-517174761cde)
+
+
 Este repositorio contiene mis notas personales, ejercicios y proyectos desarrollados durante el [Curso de React.js](https://platzi.com/cursos/reactjs/) de Platzi.
 
 ## ℹ️ Sobre el Curso
